@@ -42,33 +42,44 @@
         </ul>
       </div>
     </nav>
-    
+
   </header>
   <main>
     <section class="navegacion navContact">
-      <a href="./past.html"><i class="fa-solid fa-angle-left"></i></a>
-      <a href="#">Contact</a>
-      <a href="./stats.html"><i class="fa-solid fa-angle-right"></i></a>
+      <div class="navegacionHeaderDos">
+        <a href="./past.html"><i class="fa-solid fa-angle-left"></i></a>
+        <a class="textoDDD" href="#">Contact</a>
+        <a href="./stats.html"><i class="fa-solid fa-angle-right"></i></a>
+      </div>
+
     </section>
-    <form class="row g-3 contacto">
-      <div class="col-md-6">
-        <label for="nombre" class="form-label">Name</label>
-        <input type="text" class="form-control" id="inputNombre">
+    <section class="formulario">
+      <div class="contacto">
+        <form class="mb-3">
+          <div >
+            <label for="nombre" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputNombre">
+          </div>
+          <div >
+            <label for="mail" class="form-label">EMail</label>
+            <input type="mail" class="form-control" id="inputMail">
+          </div>
+          <div >
+            <label for="comentario" class="form-label">Message</label>
+            <textarea type="text" class="form-control" id="inputMail" rows="4"></textarea>
+          </div>
+    
+          <div >
+            <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+        </form>
       </div>
-      <div class="col-md-6">
-        <label for="mail" class="form-label">EMail</label>
-        <input type="mail" class="form-control" id="inputMail">
-      </div>
-      <div class="col-12">
-        <label for="comentario" class="form-label">Message</label>
-        <textarea type="text" class="form-control" id="inputMail" rows="4"></textarea>
-      </div>
-     
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </div>
-    </form>
+      
+    </section>
+
+    
   </main>
+
   <footer class="bg-dark">
     <section class="footer-content">
       <div class="redes">
