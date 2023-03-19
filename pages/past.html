@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../css/style-index.css">
+  <title>Past Events</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar bg-dark" data-bs-theme="dark">
+      <div class="container">
+        <div class="navbar-brand" href="#">
+          <img src="../multimedia/Logos/Logo Amazing Events.png" alt="amazing events">
+        </div>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./upcoming.html">Upcoming Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Past Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./stats.html">Stats</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <section class="navegacion navPast">
+      <a href="./upcoming.html"><i class="fa-solid fa-angle-left"></i></a>
+      <a href="#">Past Events</a>
+      <a href="./contact.html"><i class="fa-solid fa-angle-right"></i></a>
+    </section>
+   
+    <nav class="navbar navbar-main">
+      <div class="container-fluid">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria1" value="option1">
+          <label class="form-check-label" for="categoria1">
+            Feria de Comida
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria2" value="option2">
+          <label class="form-check-label" for="categoria2">
+            Salida al Museo
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria3" value="option3">
+          <label class="form-check-label" for="categoria3">
+            Fiesta de disfraces
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria4" value="option4">
+          <label class="form-check-label" for="categoria4">
+            Concierto de Música
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria5" value="option5">
+          <label class="form-check-label" for="categoria5">
+            Carrera
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria4" value="option4">
+          <label class="form-check-label" for="categoria4">
+            Intercambio de Libros
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="categoria" id="categoria5" value="option5">
+          <label class="form-check-label" for="categoria5">
+            Vamos al Cine
+          </label>
+        </div>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+      </div>
+    </nav>
+    <div class="row row-cols-1 row-cols-md-3 g-4 grupo">
+      <div class="col">
+        <div class="card h-100">
+          <img src="../multimedia/Images/Feria de comidas7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fiesta de las colectividades</h5>
+            <p class="card-text">Disfruta de tus platos favoritos, de los diferentes paises, en un evento unico para
+              toda la familia.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Precio: 5</small>
+            <a href="./detalleFeria.html" class="btn btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../multimedia/Images/Salida al museo5.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Parque Jurasico</h5>
+            <p class="card-text">Vamos al museo de paleontologia a hacer un recorrido increible para conocer los mas
+              grandes dinosaurios.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Precio: 15</small>
+            <a href="#" class="btn btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="../multimedia/Images/Maraton3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">10K por la vida</h5>
+            <p class="card-text">Ven y haz ejercicio, mejora tu salud y tu estilo de vida.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Precio: 3</small>
+            <a href="#" class="btn  btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../multimedia/Images/Libros7.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Feria del libro Escolar</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+              content. This content is a little bit longerTrae tu libro escolar que ya no usas y lleva el que necesites.
+            </p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Precio: 1</small>
+            <a href="#" class="btn  btn-success">Ver más</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark">
+    <section class="footer-content">
+      <div class="redes">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-square-instagram"></i>
+        <i class="fa-brands fa-square-whatsapp"></i>
+      </div>
+      <div class="favicon">ACNUR DIC12<img src="../multimedia/Logos/favicon.png"></div>
+    </section>
+  </footer>
+
+  <!-- SCRIPT BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

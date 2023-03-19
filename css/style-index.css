@@ -1,0 +1,260 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding-top: 310px; */
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    z-index: 10;
+
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+}
+
+.navbar-brand>img {
+    width: 90px;
+    height: 100%;
+}
+.nav .nav-link{
+    color:#EFC2C0;
+}
+.nav .nav-link:hover{
+    color:#D90368;
+}
+
+.nav-pills .nav-link.active  {
+    --bs-nav-pills-link-active-bg: #EFC2C0;
+    --bs-nav-pills-link-active-color: #D90368;
+}
+
+
+.navegacion {
+    width: 100%;
+    height: 250px;
+    /* background-color: #5BBA6F; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5em;
+    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 44px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: white;
+font-weight: bold;
+font-style: normal;
+font-variant: small-caps;
+text-transform: none;
+}
+
+.navegacion>a {
+    text-decoration: none;
+   
+
+}
+a{
+    color:white;
+    --bs-link-color-rgb:255,248,245;
+    --bs-link-hover-color-rgb: 239,194,192;
+}
+
+
+.navUpcoming::before {
+    position: absolute;
+    top: 70px;
+    left: -40px;
+    display: block;
+    box-sizing: border-box;
+    content: "¡Upcoming!";
+    text-transform: uppercase;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: 13px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    height: 0;
+    width: 150px;
+    border: 25px solid transparent;
+    border-bottom: 25px solid #D90368;
+    line-height: 23px;
+    z-index: 20;
+    transform: rotate(-45deg);
+}
+.navPast::before {
+    position: absolute;
+    top: 70px;
+    left: -40px;
+    display: block;
+    box-sizing: border-box;
+    content: "¡Past!";
+    text-transform: uppercase;
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-size: 13px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    height: 0;
+    width: 150px;
+    border: 25px solid transparent;
+    border-bottom: 25px solid #D90368;
+    line-height: 23px;
+    z-index: 20;
+    transform: rotate(-45deg);
+}
+
+.navStats {
+    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navContact {
+    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar-main {
+    width: 98%;
+    align-items: center;
+    font-size: .9em;
+
+}
+.form-check-input{
+    --bs-border-color: #5BBA6F;
+}
+.form-check-input:checked{
+  border-color: #5BBA6F !important;
+    background-color: #157347 !important;
+}
+
+.form-control{
+    --bs-border-color:#5BBA6F;
+}
+
+.grupo {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 3%;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    text-align: justify;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+align-items: center;
+    margin: 0%;
+    padding: 0%;
+}
+.btn-success{
+    --bs-btn-bg: #5BBA6F;
+    --bs-btn-border-color: #5BBA6F;
+    --bs-btn-hover-bg: #157347;
+    --bs-btn-hover-border-color: #146c43;
+}
+footer {
+    height: 50px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+
+    /* margin:3% 0%; */
+}
+
+.footer-content {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.redes {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 3%;
+    font-size: 1.3em;
+    color:#D90368;
+}
+
+.favicon {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.favicon>img {
+    margin-left: 5px;
+    width: 40px;
+}
+
+.contacto {
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+.estadisticas {
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.td {
+    width: 32%;
+}
