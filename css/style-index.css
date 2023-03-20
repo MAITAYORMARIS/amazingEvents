@@ -31,6 +31,7 @@ header {
     z-index: 10;
 
 }
+
 /* BARRA DE NAVEGACION */
 .navbar {
     width: 100%;
@@ -69,9 +70,10 @@ header {
 
 /* EFECTO DE TEXTO  */
 .textoDDD {
-        color: #f8f8f1;
-        text-shadow: 2px 2px 0px rgba(255, 255, 255, 1),
-         4px 4px 0px rgb(228, 79, 146);
+    color: #fff;
+    text-shadow: 2px 2px 0px rgb(245, 144, 199),
+        4px 4px 0px rgba(238, 112, 167, 0.849),
+        6px 6px 0px rgb(238, 42, 127);
 }
 
 /* EFECTO FIN */
@@ -138,7 +140,7 @@ a {
     box-sizing: border-box;
     content: "¡Past!";
     text-transform: uppercase;
-     font-size: 13px;
+    font-size: 13px;
     text-align: center;
     font-weight: 700;
     color: #fff;
@@ -168,10 +170,12 @@ a {
     margin-bottom: 3%;
 }
 
-.card {
+.grupo .col .card, .card{
     width: 300px;
     height: 300px;
     text-align: justify;
+    border: 2px solid #e71a7a9a;
+    box-shadow: 7px -8px 9px -6px rgba(0, 0, 0, 0.986);;
 }
 
 .card-footer {
@@ -179,13 +183,14 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    --bs-card-cap-bg: #212529;
+  
 }
 
-.btn .btn-success{
-    --bs-btn-bg: #5bba6fc9;
-    --bs-btn-border-color: #5BBA6F;
-    --bs-btn-hover-bg: #157347;
-    --bs-btn-hover-border-color: #146c43;
+.card-footer .btn-outline-light {
+    --bs-btn-hover-color: #EFC2C0;
+    --bs-btn-hover-bg: #e7026de7;
+    --bs-btn-hover-border-color:#D90368;
 }
 
 /* ESTILO DEL FOOTER DE LA PAGINA */
@@ -234,18 +239,31 @@ footer {
     margin-left: 5px;
     width: 40px;
 }
+
 /* ESTILOS DEL FORMULARIO */
-.formulario{
-    width: 50%;
+.formulario {
+    width: 40%;
     height: 400px;
     margin-top: 20px;
     margin-bottom: 25px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 15px;
     background-image: url(../multimedia/Images/fondoform.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.form {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px 35px;
+    color: white;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
 .form-check-input {
     --bs-border-color: #5BBA6F;
 }
@@ -255,21 +273,53 @@ footer {
     background-color: #157347 !important;
 }
 
-.form-control {
+/* .form-control {
     --bs-border-color: #5BBA6F;
+} */
+
+.formulario .mb-3 .form-header .form-tittle {
+    font-weight: bold;
+    font-family: sans-serif;
+    color: #D90368;
+    font-size: 1.5em;
+    text-align: center;
 }
-.contacto {
-    width: 100%;
-    height: 100%;
-          background-color: rgba(0, 0, 0, 0.671);
-    color:white;
- }
-form{
-    width: 60%;
-    height: 100%;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-top: 25px;
+
+.formulario .mb-3 .form-header .form-tittle span {
+    color: white;
+}
+
+.formulario .mb-3 .form-label {
+    color: #EFC2C0;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.formulario .mb-3 .form-control {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
+    border-bottom: 2px solid #D90368;
+    font-size: 1em;
+    color: white;
+}
+
+.formulario .mb-3 .btn-submit {
+
+
+    background-color: #d903679c;
+    border: none;
+    margin-top: 5px;
+
+    color: #fff;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.formulario .mb-3 .btn-submit:hover {
+    background-color: #D90368;
+
 }
 
 
