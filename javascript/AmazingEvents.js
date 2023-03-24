@@ -3,7 +3,8 @@ var dataAmazing = {
   "eventos": [
     {
       "id": 1,
-      "image": "Feria de comidas7.jpg",
+      // "image": "Feria de comidas7.jpg",
+      "image": "Feria de comidas7.png",
       "name": "Fiesta de las colectividades",
       "date": "2021-12-12",
       "description": "Disfruta de tus platos favoritos, de los diferentes países, en un evento único para toda la familia",
@@ -17,7 +18,7 @@ var dataAmazing = {
 
     {
       "id": 2,
-      "image": "Salida al museo5.jpg",
+      "image": "Salida al museo5.png",
       "name": "Parque Jurásico",
       "date": "2021-11-02",
       "description": "Vamos al museo de paleontología a hacer un recorrido increíble para conocer los más grandes dinosaurios",
@@ -30,7 +31,7 @@ var dataAmazing = {
     },
     {
       "id": 3,
-      "image": "Fiesta de disfraces1.jpg",
+      "image": "Fiesta de disfraces1.png",
       "name": "Noche de Halloween",
       "date": "2022-02-12",
       "description": "Ven con tu personaje disfraz más aterrador para ganar increíbles premios",
@@ -43,7 +44,7 @@ var dataAmazing = {
     },
     {
       "id": 4,
-      "image": "Concierto de musica1.jpg",
+      "image": "Concierto de musica1.png",
       "name": "Metallica in concert",
       "date": "2022-01-22",
       "description": "Unico recital de la banda más emblemática ",
@@ -56,7 +57,7 @@ var dataAmazing = {
       },
     {
       "id": 5,
-      "image": "Maraton3.jpg",
+      "image": "Maraton3.png",
       "name": "10K por la vida",
       "date": "2021-03-01",
       "description": "Ven y haz ejercicio, mejora tu salud y tu estilo de vida",
@@ -69,7 +70,7 @@ var dataAmazing = {
     },
     {
       "id": 6,
-      "image": "Libros7.jpg",
+      "image": "Libros7.png",
       "name": "Feria del libro Escolar",
       "date": "2021-10-15",
       "description": "Trae tu libro escolar que ya no usas y lleva el que necesites",
@@ -81,7 +82,7 @@ var dataAmazing = {
     },
     {
       "id": 7,
-      "image": "Cine7.jpg",
+      "image": "Cine7.png",
       "name": "Avengers",
       "date": "2022-10-15",
       "description": "Premier en 3d de Avengers de Marvel el inicio de una saga epica con tus mejores superheroes",

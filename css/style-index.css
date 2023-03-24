@@ -170,14 +170,16 @@ a {
     margin-bottom: 3%;
 }
 
-.grupo .col .card, .card{
+.card{
     width: 300px;
     height: 300px;
     text-align: justify;
     border: 2px solid #e71a7a9a;
-    box-shadow: 7px -8px 9px -6px rgba(0, 0, 0, 0.986);;
+    box-shadow: 7px -8px 9px -6px rgba(0, 0, 0, 0.986);
 }
-
+.row{
+    --bs-gutter-y: 1.5rem !important;
+}
 .card-footer {
     display: flex;
     flex-direction: row;
@@ -337,4 +339,7 @@ footer {
 
 .td {
     width: 32%;
+}
+colspan{
+    background-color: #212529;
 }
