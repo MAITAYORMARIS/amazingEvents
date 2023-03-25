@@ -57,7 +57,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 15px;
+     /* padding-left: 15px;  */
+}
+.card .row{
+    margin-top: 0;
+    --bs-gutter-y: 0rem !important;
 
 }
 

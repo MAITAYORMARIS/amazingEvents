@@ -78,7 +78,8 @@ var dataAmazing = {
       "place": "Salón D1",
       "capacity": 150000,
       "assistance": 123286,
-      "price": 1
+      "price": 1,
+      "info":"Esta feria promueve la creación de un espacio de intercambio y de venta de libros a precios accesibles, además de ofrecer charlas de temas variados. Conociendo lo que cuestan los libros nuevos y que quizá no están al alcance de todos, esta propuesta ofrece el trueque como alternativa, además de la compra"
     },
     {
       "id": 7,

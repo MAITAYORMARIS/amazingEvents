@@ -28,7 +28,6 @@ for (var i = 0; i < buttonNav.length; i++) {
 
 
     elementos.addEventListener("click", function (e) {
-        // elementos.classList.add('active'); //como remover esta clase cuando se hace otro clic
         navegacion(e.target.id);
     })
 
@@ -50,6 +49,8 @@ function navegacion(id) {
             buttonNav[0].classList.remove('active'),
             buttonNav[1].classList.add('active'),
             buttonNav[2].classList.remove('active'),
+           document.getElementById("tiempo").innerHTML="Upcoming Events",
+           document.getElementById("secNavDos").classList.add('navUpcoming'),
             display(eventosFuturos)
             break;
 
@@ -57,6 +58,8 @@ function navegacion(id) {
             buttonNav[0].classList.remove('active'),
             buttonNav[1].classList.remove('active'),
             buttonNav[2].classList.add('active'),
+            document.getElementById("tiempo").innerHTML="Past Events",
+            document.getElementById("secNavDos").classList.add('navPast'),
             display(eventosPasados)
             break;
 
@@ -64,10 +67,13 @@ function navegacion(id) {
             buttonNav[0].classList.add('active'),
             buttonNav[1].classList.remove('active'),
             buttonNav[2].classList.remove('active'),
+            document.getElementById("tiempo").innerHTML="Home",
+            document.getElementById("secNavDos").classList.add('navHome'),
             display(eventos)
     }
 
 }
+
 
 // esta funcion genera el template para la seccion seleccionada
 
@@ -86,7 +92,7 @@ function display(array) {
           </div>
           <div class="card-footer">
             <small class="badge text-bg-info">Precio: $ ${array[i].price}</small>
-            <a href="./pages/detalleFeria.html" class="btn btn-outline-light">Ver más</a>
+            <a href="./pages/detalle.html?id=${array[i].id}" class="btn btn-outline-light">Ver más</a>
           </div>
         </div>
     </div>

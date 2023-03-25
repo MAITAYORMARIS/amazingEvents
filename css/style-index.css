@@ -62,6 +62,7 @@ header {
     height: 250px;
     /* background-color: #5BBA6F; */
     background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+    
     filter: brightness(85%);
     background-size: cover;
     background-repeat: no-repeat;
