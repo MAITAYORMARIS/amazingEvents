@@ -86,7 +86,12 @@ p {
 .card-text:last-child {
     margin-bottom: 1rem;
 }
-
+#secNavDos{
+    display: none;
+}
+#cartasDeEventos{
+    display:none;
+}
 .datosUno {
     width: 100%;
     height: auto;

@@ -79,20 +79,31 @@ function navegacion(id) {
 
 // += permite ir sumando elementos en el html a medida que se recorre el array
 function display(array) {
+var url;
+var imageUrl;
+if(location.pathname=="/pages/detalle.html"){
+    url="./detalle.html"
+    imageUrl="../multimedia/Images/"
+}
+else{
+    url="./pages/detalle.html"
+    imageUrl="./multimedia/Images/"
+
+}
 
     var html = "";
     for (var i = 0; i < array.length; i++) {
         html += `
     <div class="col">
         <div class="card h-100">
-          <img src="./multimedia/Images/${array[i].image}" class="card-img-top" alt="foto ${array[i].name}">
+          <img src="${imageUrl}${array[i].image}" class="card-img-top" alt="foto ${array[i].name}">
           <div class="card-body">
             <h5 class="card-title">${array[i].name}</h5>
             <p class="card-text">${array[i].description}</p>
           </div>
           <div class="card-footer">
             <small class="badge text-bg-info">Precio: $ ${array[i].price}</small>
-            <a href="./pages/detalle.html?id=${array[i].id}" class="btn btn-outline-light">Ver más</a>
+            <a href="${url}?id=${array[i].id}" class="btn btn-outline-light">Ver más</a>
           </div>
         </div>
     </div>
@@ -104,3 +115,6 @@ function display(array) {
 
 }
 navegacion("home")
+
+
+console.log(location.pathname)
