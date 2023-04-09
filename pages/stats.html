@@ -13,6 +13,7 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/style-index.css">
+    
     <title>Stats</title>
 </head>
 
@@ -25,19 +26,19 @@
                 </div>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
-                        <a class="nav-link enlaceNav enlace" aria-current="page" href="../index.html" id="home">Home</a>
+                        <a class="nav-link enlaceNav" aria-current="page" href="../index.html" id="home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link enlaceNav enlace" href="#" id="upcoming">Upcoming Events</a>
+                        <a class="nav-link enlaceNav" href="../index.html?tiempo=upcoming" id="upcoming">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link enlaceNav enlace" href="#" id="past">Past Events</a>
+                        <a class="nav-link enlaceNav" href="../index.html?tiempo=past" id="past">Past Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link enlace" href="./contact.html" id="contact">Contact</a>
+                        <a class="nav-link" href="./contact.html" id="contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active enlace" href="#" id="stats">Stats</a>
+                        <a class="nav-link" href="#" id="stats">Stats</a>
                     </li>
                 </ul>
             </div>
@@ -48,7 +49,7 @@
         <section class="navegacion navStats">
             <div class="navegacionHeaderDos">
                 <a href="./contact.html"><i class="fa-solid fa-angle-left"></i></a>
-                <a class="textoDDD" href="#">Stats</a>
+                <p class="textoDDD"  id="titulo">Stats</p>
                 <a href="../index.html"><i class="fa-solid fa-angle-right"></i></a>
             </div>
 
@@ -148,8 +149,12 @@
 
     <!-- SCRIPTS DE LA PAGINA -->
     <script src="../javascript/AmazingEvents.js"></script>
-    <script src="../javascript/index.js"></script>
-    <script src="../javascript/detalle.js"></script>
+    
+     <script src="../javascript/index.js"></script>
+    <script src="../javascript/stats.js"></script>
+   
+     
+ 
    
     <!-- SCRIPT BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

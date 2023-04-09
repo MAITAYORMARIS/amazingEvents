@@ -13,6 +13,8 @@
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/style-index.css">
+  
+      
   <title>Contact</title>
 </head>
 
@@ -28,16 +30,16 @@
             <a class="nav-link enlaceNav" aria-current="page" href="../index.html" id="home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link enlaceNav " href="../index.html" id="upcoming">Upcoming Events</a>
+            <a class="nav-link enlaceNav" href="../index.html?tiempo=upcoming" id="upcoming">Upcoming Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link enlaceNav " href="../index.html" id="past">Past Events</a>
+            <a class="nav-link enlaceNav" href="../index.html?tiempo=past" id="past">Past Events</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="./contact.html" id="contact">Contact</a>
+            <a class="nav-link " href="#" id="contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link enlace" href="./stats.html" id="stats">Stats</a>
+            <a class="nav-link" href="./stats.html" id="stats">Stats</a>
           </li>
         </ul>
       </div>
@@ -45,10 +47,10 @@
 
   </header>
   <main>
-    <section class="navegacion navContact"  id="secNavDos">
+    <section class="navegacion navContact">
       <div class="navegacionHeaderDos">
-        <a href="./past.html"><i class="fa-solid fa-angle-left"></i></a>
-        <a class="textoDDD" href="#">Contact</a>
+        <a href="../index.html?tiempo=past"><i class="fa-solid fa-angle-left"></i></a>
+        <p class="textoDDD" id="titulo">Contact</p>
         <a href="./stats.html"><i class="fa-solid fa-angle-right"></i></a>
       </div>
 
@@ -93,10 +95,13 @@
 
 
     <!-- SCRIPTS DE LA PAGINA -->
-    <!-- <script src="../javascript/AmazingEvents.js"></script>
-    <script src="../javascript/index.js"></script>
-    <script src="../javascript/stats_contact.js"></script> -->
-    <!-- <script src="../javascript/detalle.js"></script> -->
+    <script src="../javascript/AmazingEvents.js"></script>
+    <script src="../javascript/index.js"></script> 
+    <script src="../javascript/contact.js"></script>
+     
+ 
+     
+   
   
   <!-- SCRIPT BOOTSTRAP -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

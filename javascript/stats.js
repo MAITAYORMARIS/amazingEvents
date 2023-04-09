@@ -1,0 +1,6 @@
+(function() {
+    navegacion("stats")
+
+ })()
+ 
+

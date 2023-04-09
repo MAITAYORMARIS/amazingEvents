@@ -54,7 +54,8 @@ header {
 .nav-pills .nav-link.active {
     --bs-nav-pills-link-active-bg: #EFC2C0;
     --bs-nav-pills-link-active-color: #D90368;
-}
+} 
+
 
 /* SEGUNDO NAV NAVEGACION */
 .navegacion {
@@ -67,6 +68,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 44px;
+   
+    
 }
 
 
@@ -245,6 +248,9 @@ footer {
 }
 
 /* ESTILOS DEL FORMULARIO */
+/* #formulario{
+    display: none;
+} */
 .formulario {
     width: 40%;
     height: 400px;
