@@ -36,6 +36,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/contact.html" id="contact">Contact</a>
+            
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/stats.html" id="stats">Stats</a>
@@ -50,70 +51,29 @@
     <!-- ENCABEZADO DE NAVEGACION ENTRE PAGINAS -->
     <section class="navegacion" id="secNavDos">
       <div class="navegacionHeaderDos ">
-        <a href="#"><i class="fa-solid fa-angle-left"></i></a>
-        <p class="textoDDD" id="tiempo"></p>
-        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+        <a id="enlaceIzq"><i class="fa-solid fa-angle-left"></i></a>
+        <p class="textoDDD" id="tituloCarousel"></p>
+        <a id="enlaceDer"><i class="fa-solid fa-angle-right"></i></a>
       </div>
 
     </section>
     <!-- CATEGORIAS  -->
     <nav class="navbar navbar-main">
-      <div class="container-fluid">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria1" value="option1">
-          <label class="form-check-label" for="categoria1">
-            Feria de Comida
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria2" value="option2">
-          <label class="form-check-label" for="categoria2">
-            Salida al Museo
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria3" value="option3">
-          <label class="form-check-label" for="categoria3">
-            Fiesta de disfraces
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria4" value="option4">
-          <label class="form-check-label" for="categoria4">
-            Concierto de Música
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria5" value="option5">
-          <label class="form-check-label" for="categoria5">
-            Carrera
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria4" value="option4">
-          <label class="form-check-label" for="categoria4">
-            Intercambio de Libros
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="categoria" id="categoria5" value="option5">
-          <label class="form-check-label" for="categoria5">
-            Vamos al Cine
-          </label>
-        </div>
+      <!-- cuadros de chequeo por categoria -->
+      <div class="container-fluid" id="check"></div>
+      <!-- inputsearch -->
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Busca tu evento" aria-label="Search" id="search">
+        <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
 
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
     </nav>
     <!-- CARTAS DE EVENTOS -->
     <div class="row row-cols-3 grupo" id="cartasDeEventos">
 
     </div>
 
-  
+
   </main>
   <footer class="bg-dark">
     <section class="footer-content">
@@ -137,7 +97,7 @@
   <!-- SCRIPTS DE LA PAGINA -->
   <script src="./javascript/AmazingEvents.js"></script>
   <script src="./javascript/index.js"></script>
- 
+
 
   <!-- <script src="./javascript/detalle.js"></script> -->
 </body>
