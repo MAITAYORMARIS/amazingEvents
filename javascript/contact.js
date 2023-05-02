@@ -1,6 +1,31 @@
-(function() {
-   navegacion("contact")
+(function contacto() {
+   buttonNav[0].classList.remove("active"),
+   buttonNav[1].classList.remove("active"),
+   buttonNav[2].classList.remove("active"),
+   buttonNav[3].classList.add("active"),
+   buttonNav[4].classList.remove("active"),
+   document.getElementById("tituloCarousel").innerHTML = "Contact"
 })()
+
+console.log("llamado a formulario")
+
+let formulario = document.querySelector("form")
+
+formulario.addEventListener("submit", (evento)=>{formularioData(evento)})
+
+function formularioData(evento){
+   evento.preventDefault()
+   
+   let formDatos={
+      nombre : evento.target[0].value,
+      apellido : evento.target[1].value,
+      email : evento.target[2].value,
+         comentario: evento.target[3].value,
+   }
+   console.log(formDatos)
+}
+
+
 
 
 

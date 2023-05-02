@@ -1,8 +1,20 @@
-// console.log(dataAmazing)
+let data
 
-var fechaBase = dataAmazing.fechaActual
+async function getData() {
+    await fetch("https://amd-amazingevents-api.onrender.com/api/eventos")
+        .then(response => response.json())
+        .then(json =>data=(json))
+        // console.log(data)
+        fechaJson=data.fechaActual
+}
+getData()
+
+
+
+
+let fechaBase = dataAmazing.fechaActual
 console.log(fechaBase)
-var eventos = dataAmazing.eventos
+let eventos = dataAmazing.eventos
 console.log(eventos)
 
 var eventosPasados = []
@@ -101,7 +113,7 @@ function navegacion(id) {
                 document.getElementById("secNavDos").classList.add('navUpcoming'),
                 document.getElementById("secNavDos").classList.remove('navPast'),
                 display(eventosFuturos),
-                inputSearch.value="",
+                inputSearch.value = "",
                 selectedBox = [],
                 creaCategorias(eventosFuturos),
                 arrayBusqueda = eventosFuturos,
@@ -118,7 +130,7 @@ function navegacion(id) {
                 document.getElementById("secNavDos").classList.add('navPast'),
                 document.getElementById("secNavDos").classList.remove('navUpcoming'),
                 display(eventosPasados),
-                inputSearch.value="",
+                inputSearch.value = "",
                 selectedBox = [],
                 arrayBusqueda = eventosPasados,
                 creaCategorias(eventosPasados),
@@ -126,15 +138,17 @@ function navegacion(id) {
             break;
 
         case "contact":
-            buttonNav[0].classList.remove("active"),
-                buttonNav[1].classList.remove("active"),
-                buttonNav[2].classList.remove("active"),
-                buttonNav[3].classList.add("active"),
-                buttonNav[4].classList.remove("active"),
-                document.getElementById("tituloCarousel").innerHTML = "Contact",
-                document.getElementById("secNavDos").classList.remove('navUpcoming'),
-                document.getElementById("secNavDos").classList.remove('navPast'),
-                console.log("con funcion navegacion estoy en contacto")
+            // buttonNav[0].classList.remove("active"),
+            //     buttonNav[1].classList.remove("active"),
+            //     buttonNav[2].classList.remove("active"),
+            //     buttonNav[3].classList.add("active"),
+            //     buttonNav[4].classList.remove("active"),
+            // document.getElementById("tituloCarousel").innerHTML = "Contact",
+            // document.getElementById("secNavDos").classList.remove('navUpcoming'),
+            // document.getElementById("secNavDos").classList.remove('navPast'),
+            // console.log("con funcion navegacion estoy en contacto"),
+            // console.log("llamado a formulario")
+
             break;
 
         case "stats":
@@ -159,7 +173,7 @@ function navegacion(id) {
                 document.getElementById("secNavDos").classList.remove('navUpcoming'),
                 document.getElementById("secNavDos").classList.remove('navPast'),
                 display(eventos),
-                inputSearch.value="",
+                inputSearch.value = "",
                 selectedBox = [],
                 arrayBusqueda = eventos,
                 creaCategorias(eventos),
@@ -249,7 +263,7 @@ function creaCategorias(array) {
 function selectedBoxListener() {
     // capturo las etiquetas input de tipo checkbox 
     var box = document.querySelectorAll('input[type=checkbox')
-    
+
     for (i = 0; i < box.length; i++) {
         box[i].addEventListener("change", function () {
             selectedBox = []
@@ -285,15 +299,23 @@ function filtradoMultiple() {
         }
     }
     else {
-       filtroBusqueda=arrayBusqueda
+        filtroBusqueda = arrayBusqueda
     }
 
-    filtroBusqueda.length>0 ? 
-    display(filtroBusqueda):
-    document.getElementById("cartasDeEventos").innerHTML = `<h1>No se encontraron resultados. Intenta nuevamente</h1>`
+    filtroBusqueda.length > 0 ?
+        display(filtroBusqueda) :
+        document.getElementById("cartasDeEventos").innerHTML = `<h1>No se encontraron resultados. Intenta nuevamente</h1>`
     console.log(datosInput)
     console.log(selectedBox)
 }
+
+
+
+
+
+
+
+
 
 
 

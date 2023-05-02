@@ -1,14 +1,21 @@
-var fechaBase = dataAmazing.fechaActual
+(function () {
+    buttonNav[0].classList.remove("active"),
+        buttonNav[1].classList.remove("active"),
+        buttonNav[2].classList.remove("active"),
+        buttonNav[3].classList.remove("active"),
+        buttonNav[4].classList.remove("active")
+})()
+
+// var fechaBase = dataAmazing.fechaActual
 console.log(fechaBase)
 
-var eventos = dataAmazing.eventos
+// var eventos = dataAmazing.eventos
 
 console.log(location.search) //busca los datos en la url
 var id = location.search.split("?id=").filter(Number)
 
 var selectedId = id[0]
 console.log(selectedId)
-
 var detalleEvento = []
 
 for (var i = 0; i < eventos.length; i++) {
@@ -18,13 +25,12 @@ for (var i = 0; i < eventos.length; i++) {
     }
 }
 
-// console.log(detalleEvento[0])
-// console.log(detalleEvento[0].name)
+console.log(detalleEvento[0])
 
 if (detalleEvento[0].date > fechaBase) {
     detalleEvento[0].assistance = `Estimada(${detalleEvento[0].estimate})`
 }
-// funcion INFORMACION: sirve para agregar una descripcion mas extensa del evento, realiza un push de una propiedad llamada info al array del evento[i], filtrado por el id seleccionado
+// // funcion INFORMACION: sirve para agregar una descripcion mas extensa del evento, realiza un push de una propiedad llamada info al array del evento[i], filtrado por el id seleccionado
 function informacion(selectedId) {
     switch (selectedId) {
         case "7":
@@ -97,21 +103,21 @@ console.log(contenido)
 document.getElementById("detallesDeLosEventos").innerHTML = contenido
 
 
-// ENLACE A OTRAS PAGINAS
-var buttonNav = document.getElementsByClassName("nav-link")
+// // ENLACE A OTRAS PAGINAS
+
 console.log(buttonNav)
 
 for (var i = 0; i < buttonNav.length; i++) {
-    const elementos = buttonNav[i];
+    const botonesNav = buttonNav[i];
 
 
-    elementos.addEventListener("click", function (e) {
-
-        navegacion(e.target.id);
-        var seccion = document.getElementById("secNavDos");
-        seccion.style.display = "flex";
-        document.getElementById("detallesDeLosEventos").style.display = "none";
-        document.getElementById("cartasDeEventos").style.display = "flex";
+    botonesNav.addEventListener("click", function (e) {
+        console.log(e.target.id)
+        navegacion(e.target.id)
+        document.getElementsByClassName("navbar-main")="flex"
+        document.getElementById("secNavDos").style.display = "flex"
+        document.getElementById("detallesDeLosEventos").style.display = "none"
+        document.getElementById("cartasDeEventos").style.display = "flex"
 
     })
 
