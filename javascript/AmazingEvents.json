@@ -1,4 +1,4 @@
-var dataAmazing = {
+{
   "fechaActual": "2022-01-01",
   "eventos": [
     {
@@ -84,6 +84,6 @@ var dataAmazing = {
       "capacity": 9000,
       "estimate":9000,
       "price": 250
-    },
+    }
   ]
 }

@@ -44,7 +44,9 @@ main {
     margin-top: 70px;
 
 }
-
+#navbarMainDetalle{
+    display:none
+}
 .card-detalle {
     width: 70%;
     height: auto;

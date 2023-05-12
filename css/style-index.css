@@ -1,13 +1,16 @@
 * {
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
-html,
+html{
+    min-height: 100%;
+}
 body {
-    width: 100%;
-    height: auto;
+    width: 100%;   
+   min-height: 100vh;
+ 
 }
 
 main {
@@ -17,7 +20,6 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding-top: 310px; */
 }
 
 header {
@@ -35,7 +37,6 @@ header {
 /* BARRA DE NAVEGACION */
 .navbar {
     width: 100%;
-    height: 60px;
 }
 
 .navbar-brand>img {
@@ -60,16 +61,6 @@ header {
 /* SEGUNDO NAV NAVEGACION */
 .navegacion {
     width: 100%;
-    height: 250px;
-    /* background-color: #5BBA6F; */
-    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
-    
-    filter: brightness(85%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 44px;
-   
-    
 }
 
 
@@ -90,7 +81,10 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 3em;
+    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+        filter: brightness(85%);
+    background-size:cover;
+    background-repeat: no-repeat;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0px;
     word-spacing: 60px;
@@ -100,7 +94,6 @@ header {
     font-variant: small-caps;
     text-transform: none;
     margin: 0;
-
 }
 
 
@@ -162,11 +155,13 @@ a {
 /* FILTROS DE CATEGORIA */
 .navbar-main {
     width: 98%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: .9em;
+    margin-bottom: 30px;
 }
 #check{
     width: 75%;
@@ -182,10 +177,10 @@ a {
 
 /* ESTILOS DE LAS CARTAS */
 .grupo {
-    width: 80%;
+    width: 90%;
     height: auto;
-    margin-top: 20px;
     margin-bottom: 3%;
+   
 }
 
 .card{
@@ -197,6 +192,10 @@ a {
 }
 .row{
     --bs-gutter-y: 1.5rem !important;
+    justify-content: center;
+}
+.card-body{
+    height: 40%;
 }
 .card-footer {
     display: flex;
@@ -204,13 +203,19 @@ a {
     justify-content: space-between;
     align-items: center;
     --bs-card-cap-bg: #212529;
-  
+    height: 15%;
 }
 
 .card-footer .btn-outline-light {
     --bs-btn-hover-color: #EFC2C0;
     --bs-btn-hover-bg: #e7026de7;
     --bs-btn-hover-border-color:#D90368;
+}
+
+.card img{
+    height: 45%;
+    width:100%;
+    border-radius: 3px 3px 0px 0px;
 }
 
 /* ESTILO DEL FOOTER DE LA PAGINA */
@@ -364,3 +369,167 @@ footer {
 colspan{
     background-color: #212529;
 }
+@media screen and (max-width:280px) {
+    .navegacion{
+    display:none;}
+    .navbar-main{
+        display:none !important;
+    }
+    .navbar{
+        height: auto;
+    }
+    .grupo{
+        margin-top: 200px !important;
+    }
+    .card{
+        width: 200px;
+        height: 200px;
+        box-shadow: 7px -8px 9px -6px rgba(0, 0, 0, 0.986);
+    }
+    .favicon {
+        font-size: 0.7em;
+        width: 50%;
+    }
+    .redes{
+        font-size: 0.9em;
+        width: 50%;
+    }
+    .card-footer .btn-outline-light {
+        --bs-btn-padding-x: 0.25rem;
+    --bs-btn-padding-y: 0.25rem;
+    }
+
+}
+@media screen and (min-width:280.98px)  and (max-width:575.98px){
+    .navbar {
+        height: 130px;
+        
+    }
+    .navbar>.container{
+        justify-content: center !important;
+        padding: 0;
+    }
+    .navegacion{
+        margin-top:130px;
+        height: 150px;
+    }
+    .navegacionHeaderDos{
+        font-weight: 300;
+    }
+    .contenedorTextoDDD{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        text-align: center;
+    }
+    .navUpcoming::before {
+    top: 140px;}
+    .navPast::before {
+        top: 140px;
+    }
+    .navbar-main {
+        width: 100%;
+        margin-bottom: 70px;
+    }
+    .navegacionHeaderDos{
+        font-size: 2em;
+    }
+    
+    #check{
+        width: 100%;
+        column-gap: 12px;
+       
+    }
+    .navbar-main form{
+        width: 75%;
+        margin-left: 12%;
+        margin-top: 20px;
+    }
+    .favicon {
+        font-size: 0.8em;
+        width: 50%;
+    }
+    .redes{
+        font-size: 1em;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width: 991.98px){
+    .navbar {
+        height: 100px;
+    }
+    .navbar>.container{
+        justify-content: center !important;
+        padding: 0;
+    }
+    .navegacion{
+        margin-top:100px;
+        height: 200px;
+    }
+    .navegacionHeaderDos{
+        font-size: 2.2em;
+    }
+    .navUpcoming::before {
+    top: 110px;}
+    .navPast::before {
+        top: 110px;
+    }
+    #check{
+        width: 65%;
+    }
+    .navbar-main form{
+        width: 35%;
+      
+    }
+   .container, .container-sm{
+        max-width: 98% !important;
+    }
+    .container, .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+       padding: 0 !important;
+        --bs-gutter-x: 1rem !important;
+}}
+    
+@media screen and (min-width:992px)and (max-width: 1380px){
+    .navbar {
+        height: 60px;
+    }
+    .navegacion {
+        height: 250px;
+        margin-top: 60px;
+    }
+    .navegacionHeaderDos{
+        font-size: 3em;
+    }
+    .navUpcoming::before {
+    top: 70px;}
+    .navPast::before {
+        top: 70px;
+    }
+    
+
+}
+
+@media screen and (min-width:1381px){
+    .navbar {
+        height: 70px;
+    }
+    .navegacion {
+        height: 250px;
+        margin-top: 70px;
+    }
+    .navegacionHeaderDos{
+        font-size: 3.2em;
+    }
+    .navegacionHeaderDos{
+        font-size: 3em;
+    }
+    .navUpcoming::before {
+    top: 80px;}
+    .navPast::before {
+        top: 80px;
+    }
+}
+

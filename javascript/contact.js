@@ -1,3 +1,14 @@
+var buttonNav = document.getElementsByClassName("nav-link")
+console.log(buttonNav)
+
+for (var i = 0; i < buttonNav.length; i++) {
+    const elementos = buttonNav[i];
+
+    elementos.addEventListener("click", function (e) {
+        navegacion(e.target.id);
+    })
+}
+
 (function contacto() {
    buttonNav[0].classList.remove("active"),
    buttonNav[1].classList.remove("active"),
@@ -5,6 +16,7 @@
    buttonNav[3].classList.add("active"),
    buttonNav[4].classList.remove("active"),
    document.getElementById("tituloCarousel").innerHTML = "Contact"
+
 })()
 
 console.log("llamado a formulario")

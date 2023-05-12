@@ -1,22 +1,5 @@
-let data
-
-async function getData() {
-    await fetch("https://amd-amazingevents-api.onrender.com/api/eventos")
-        .then(response => response.json())
-        .then(json =>data=(json))
-        // console.log(data)
-        fechaJson=data.fechaActual
-}
-getData()
-
-
-
-
-let fechaBase = dataAmazing.fechaActual
-console.log(fechaBase)
-let eventos = dataAmazing.eventos
-console.log(eventos)
-
+let fechaBase
+let eventos = []
 var eventosPasados = []
 var eventosFuturos = []
 let arrayBusqueda = []
@@ -24,14 +7,25 @@ let selectedBox = []
 let datosInput = ""
 var inputSearch = document.getElementById("search")
 
-for (var i = 0; i < eventos.length; i++) {
-    if (eventos[i].date > fechaBase) {
-        eventosFuturos.push(eventos[i])
+async function getData() {
+    let dataApi;
+    await fetch("https://amd-amazingevents-api.onrender.com/api/eventos")
+        .then(response => response.json())
+        .then(json => dataApi = json)
+
+    fechaBase = dataApi.fechaActual
+    eventos = dataApi.eventos
+    for (var i = 0; i < eventos.length; i++) {
+        if (eventos[i].date > fechaBase) {
+            eventosFuturos.push(eventos[i])
+        }
+        else {
+            eventosPasados.push(eventos[i])
+        }
     }
-    else {
-        eventosPasados.push(eventos[i])
-    }
-}
+   
+navegacion()
+}   getData()
 
 // capturando el id de la seccion a la que se hace click en la barra de navegacion
 var buttonNav = document.getElementsByClassName("nav-link")
@@ -46,6 +40,7 @@ for (var i = 0; i < buttonNav.length; i++) {
 }
 // obteniendo la flecha del html
 var flechaIzq = document.getElementsByClassName("fa-angle-left")
+console.log(flechaIzq)
 // agregando el evento click a la flecha, al hacer click ejecuta dos acciones
 //primero: en los botones de navegacion, busca el elemento que tenga la clase 'active' para ver en qué pagina estamos 
 //y obtiene el ID del boton
@@ -101,8 +96,10 @@ function pastToContact() {
 
 // esta funcion evalua a que seccion corresponde el id capturado para generar el template
 function navegacion(id) {
+    
     switch (id) {
         case "upcoming":
+         
 
             buttonNav[0].classList.remove("active"),
                 buttonNav[1].classList.add("active"),
@@ -112,12 +109,15 @@ function navegacion(id) {
                 document.getElementById("tituloCarousel").innerHTML = "Upcoming Events",
                 document.getElementById("secNavDos").classList.add('navUpcoming'),
                 document.getElementById("secNavDos").classList.remove('navPast'),
+                console.log("con funcion navegacion estoy en futuros"),
+                console.log(eventosFuturos),
                 display(eventosFuturos),
                 inputSearch.value = "",
                 selectedBox = [],
                 creaCategorias(eventosFuturos),
-                arrayBusqueda = eventosFuturos,
-                console.log("con funcion navegacion estoy en futuros")
+                arrayBusqueda = eventosFuturos
+                
+                
             break;
 
         case "past":
@@ -129,15 +129,19 @@ function navegacion(id) {
                 document.getElementById("tituloCarousel").innerHTML = "Past Events",
                 document.getElementById("secNavDos").classList.add('navPast'),
                 document.getElementById("secNavDos").classList.remove('navUpcoming'),
+                console.log("con funcion navegacion estoy en pasados"),
+                console.log(eventosPasados),
                 display(eventosPasados),
                 inputSearch.value = "",
                 selectedBox = [],
                 arrayBusqueda = eventosPasados,
-                creaCategorias(eventosPasados),
-                console.log("con funcion navegacion estoy en pasados")
+                creaCategorias(eventosPasados)
+                
             break;
 
         case "contact":
+
+
             // buttonNav[0].classList.remove("active"),
             //     buttonNav[1].classList.remove("active"),
             //     buttonNav[2].classList.remove("active"),
@@ -152,6 +156,7 @@ function navegacion(id) {
             break;
 
         case "stats":
+            initStats()
             buttonNav[0].classList.remove("active"),
                 buttonNav[1].classList.remove("active"),
                 buttonNav[2].classList.remove("active"),
@@ -172,12 +177,15 @@ function navegacion(id) {
                 document.getElementById("tituloCarousel").innerHTML = "Home",
                 document.getElementById("secNavDos").classList.remove('navUpcoming'),
                 document.getElementById("secNavDos").classList.remove('navPast'),
+                console.log(" con funcion navegacion estoy en home"),
+                console.log(eventos),
                 display(eventos),
                 inputSearch.value = "",
                 selectedBox = [],
                 arrayBusqueda = eventos,
-                creaCategorias(eventos),
-                console.log(" con funcion navegacion estoy en home")
+                creaCategorias(eventos)
+                
+                
     }
 }
 
@@ -185,31 +193,30 @@ function navegacion(id) {
 // // function display genera el template para la seccion seleccionada
 // += permite ir sumando elementos en el html a medida que se recorre el array
 function display(array) {
-    var url;
-    var imageUrl;
-    if (location.pathname == "/pages/detalle.html") {
-        url = "./detalle.html"
-        imageUrl = "../multimedia/Images/"
-    }
-    else {
-        url = "./pages/detalle.html"
-        imageUrl = "./multimedia/Images/"
-
-    }
+    // var url;
+    // var imageUrl;
+    // if (location.pathname == "/pages/detalle.html") {
+    //     url = "./detalle.html"
+    //     imageUrl = "../multimedia/Images/"
+    // }
+    // else{
+    //     url="./pages/detalle.html"
+    //     imageUrl=""
+    // }
 
     var html = "";
     for (var i = 0; i < array.length; i++) {
         html += `
     <div class="col">
         <div class="card h-100">
-          <img src="${imageUrl}${array[i].image}" class="card-img-top" alt="foto ${array[i].name}">
+          <img src="${array[i].image}" class="card-img-top" alt="foto ${array[i].name}">
           <div class="card-body">
             <h5 class="card-title">${array[i].name}</h5>
             <p class="card-text">${array[i].description}</p>
           </div>
           <div class="card-footer">
             <small class="badge text-bg-info">Precio: $ ${array[i].price}</small>
-            <a href="${url}?id=${array[i].id}" class="btn btn-outline-light">Ver más</a>
+            <a href="./pages/detalle.html?id=${array[i].id}" class="btn btn-outline-light">Ver más</a>
           </div>
         </div>
     </div>
@@ -222,8 +229,8 @@ function display(array) {
 // navegacion entre upcoming/past/home(navbar)
 console.log(location.search)
 var tiempo = location.search.split("?tiempo=")
-console.log(tiempo[1])
-switch (tiempo[1]) {
+console.log(tiempo[0])
+switch (tiempo[0]) {
     case "upcoming": navegacion("upcoming") //clickFlechaIzq("upcoming")
         break;
     case "past": navegacion("past") //clickFlechaIzq("past")
