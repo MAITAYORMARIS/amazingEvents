@@ -88,8 +88,8 @@ async function construyeStats() {
                 categoria.asistenciaTotalEstimada = asistenciaTotalEstimada
             }
         }
-        categoria.porcentajeAsistencia = (totalAsistencia * 100) / totalCapacidadPasados + "%"
-        categoria.porcentajeAsistEstimada = (asistenciaTotalEstimada * 100) / totalCapacidadFuturos + "%"
+        categoria.porcentajeAsistencia = ((totalAsistencia * 100) / totalCapacidadPasados).toFixed(2) + "%"
+        categoria.porcentajeAsistEstimada = ((asistenciaTotalEstimada * 100) / totalCapacidadFuturos).toFixed(2) + "%"
 
         let ingresosTotales = 0
         categoria.ingresosPorItem.map(ingresos => ingresosTotales += ingresos)
@@ -121,23 +121,64 @@ async function construyeStats() {
     let eventoMenorAsist = eventosPasados.filter(evento => evento.porcentajeAsistencia == menor)
     console.log(eventoMenorAsist)
 
-    let mayorCapacidad=eventos.sort((a,b)=>{return b.capacity - a.capacity})
+    let mayorCapacidad = eventos.sort((a, b) => { return b.capacity - a.capacity })
     console.log(mayorCapacidad)
 
-// creando elementos de la tabla
+    // creando elementos de la tabla eventos mayores y menores valores
     var tdMayorAsistencia = document.createElement("td")
     var tdMenorasistencia = document.createElement("td")
     var tdMayorCapacidad = document.createElement("td")
     var rowmaxmin = document.getElementById("maxmin")
 
+
     rowmaxmin.append(tdMayorAsistencia)
-    tdMayorAsistencia.append(eventoMayorAsist[0].name + " " +eventoMayorAsist[0].porcentajeAsistencia +"%")
+    tdMayorAsistencia.append(eventoMayorAsist[0].name + " " + eventoMayorAsist[0].porcentajeAsistencia + "%")
 
     rowmaxmin.append(tdMenorasistencia)
-    tdMenorasistencia.append(eventoMenorAsist[0].name + " " +eventoMenorAsist[0].porcentajeAsistencia +"%")
+    tdMenorasistencia.append(eventoMenorAsist[0].name + " " + eventoMenorAsist[0].porcentajeAsistencia + "%")
 
     rowmaxmin.append(tdMayorCapacidad)
     tdMayorCapacidad.append(mayorCapacidad[0].name)
 
+    // creando elementos de estadisticas de futuros
+    var tablafuturos = document.getElementById("statsFuturos")
+    var tablaPasados = document.getElementById("statsPasados")
+
+    let InfoToStatsFuturos=[]
+    InfoToStatsFuturos= ingresosyAsistencia.sort((a,b)=>{
+        return b.ingresosEstimados - a.ingresosEstimados
+    })
+  InfoToStatsFuturos.map(categoria => {
+        if (categoria.ingresosEstimados) {
+            tablafuturos.innerHTML +=
+                ` <tr>
+ <td>${categoria.categoria}</td>
+ <td>${categoria.ingresosEstimados}</td>
+ <td>${categoria.porcentajeAsistEstimada}</td>
+</tr>
+
+ `
+        }
+    })
+
+    let InfoToStatsPasados=[]
+    InfoToStatsPasados= ingresosyAsistencia.sort((a,b)=>{
+        return b.ingresosTotal - a.ingresosTotal
+    })
+    InfoToStatsPasados.map(categoria => {
+        if (categoria.ingresosTotal) {
+            tablaPasados.innerHTML +=
+                ` <tr>
+ <td>${categoria.categoria}</td>
+ <td>${categoria.ingresosTotal}</td>
+ <td>${categoria.porcentajeAsistencia}</td>
+</tr>
+ `
+        }
+    })
+
 }
+
+
+
 
