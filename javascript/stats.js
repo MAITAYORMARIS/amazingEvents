@@ -61,7 +61,6 @@ async function construyeStats() {
             asistenciaPorItem: datos.data.map(item => item.assistance ? item.assistance : 0),
             asistenciaEstItem: datos.data.map(item => item.estimate ? item.estimate : 0),
             capacidad: datos.data.map(item => item.capacity ? item.capacity : 0)
-
         })
     })
 
@@ -128,7 +127,10 @@ async function construyeStats() {
     var tdMayorAsistencia = document.createElement("td")
     var tdMenorasistencia = document.createElement("td")
     var tdMayorCapacidad = document.createElement("td")
-    var rowmaxmin = document.getElementById("maxmin")
+    // var rowmaxmin = document.getElementById("maxmin")
+    var tableMaxMin = document.getElementById("statsMaxMin")
+    var rowmaxmin = document.createElement("tr")
+    tableMaxMin.append(rowmaxmin)
 
 
     rowmaxmin.append(tdMayorAsistencia)
@@ -144,11 +146,11 @@ async function construyeStats() {
     var tablafuturos = document.getElementById("statsFuturos")
     var tablaPasados = document.getElementById("statsPasados")
 
-    let InfoToStatsFuturos=[]
-    InfoToStatsFuturos= ingresosyAsistencia.sort((a,b)=>{
+    let InfoToStatsFuturos = []
+    InfoToStatsFuturos = ingresosyAsistencia.sort((a, b) => {
         return b.ingresosEstimados - a.ingresosEstimados
     })
-  InfoToStatsFuturos.map(categoria => {
+    InfoToStatsFuturos.map(categoria => {
         if (categoria.ingresosEstimados) {
             tablafuturos.innerHTML +=
                 ` <tr>
@@ -161,8 +163,8 @@ async function construyeStats() {
         }
     })
 
-    let InfoToStatsPasados=[]
-    InfoToStatsPasados= ingresosyAsistencia.sort((a,b)=>{
+    let InfoToStatsPasados = []
+    InfoToStatsPasados = ingresosyAsistencia.sort((a, b) => {
         return b.ingresosTotal - a.ingresosTotal
     })
     InfoToStatsPasados.map(categoria => {

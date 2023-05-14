@@ -11,7 +11,7 @@
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="../css/style-index.css">
  
   
@@ -23,8 +23,8 @@
   <header>
     <nav class="navbar bg-dark" data-bs-theme="dark">
       <div class="container">
-        <div class="navbar-brand" href="#">
-          <img src="../multimedia/Logos/Logo Amazing Events.png" alt="amazing events">
+        <div class="navbar-brand">
+          <img src="../multimedia/Logos/LogoAmazingEvents.png" alt="amazing events">
         </div>
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -48,14 +48,14 @@
 
   </header>
   <main>
-    <section class="navegacion navContact" id="secNavDos">
+    <div class="navegacion navContact" id="secNavDos">
       <div class="navegacionHeaderDos">
         <a href="../index.html?tiempo=past"><i class="fa-solid fa-angle-left"></i></a>
         <p class="textoDDD" id="tituloCarousel"></p>
         <a href="./stats.html"><i class="fa-solid fa-angle-right"></i></a>
       </div>
 
-    </section>
+    </div>
     <nav class="navbar navbar-main" id="navbarMainDetalle" style="display: none;">
       <!-- cuadros de chequeo por categoria -->
       <div class="container-fluid" id="check"></div>
@@ -67,46 +67,46 @@
 
     </nav>
     <div class="row row-cols-3 grupo" id="cartasDeEventos" style="display: none;">    </div>
-    <section class="formulario">
+    <div class="formulario">
       <form class="mb-3 form">
         <div class="form-header">
           <p class="form-tittle">C<span>ontact </span> U<span>s</span></p>
         </div>
         <div>
           <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Escriba su Nombre" required>
+          <input type="text" class="form-control" id="nombre" placeholder="Escriba su Nombre" required>
         </div>
         <div>
-          <label for="nombre" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="inputNombre" placeholder="Escriba su Apellido" required>
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="apellido" placeholder="Escriba su Apellido" required>
         </div>
         <div>
           <label for="mail" class="form-label">EMail</label>
-          <input type="mail" class="form-control" id="inputMail" placeholder="Escriba su correo electrónico" required>
+          <input type="email" class="form-control" id="mail" placeholder="Escriba su correo electrónico" required>
         </div>
         <div>
           <label for="comentario" class="form-label">Message</label>
-          <textarea type="text" class="form-control" id="inputComment" rows="4" placeholder="Escriba sus comentarios"></textarea>
+          <textarea name="comentario" class="form-control" id="comentario" rows="4" placeholder="Escriba sus comentarios"></textarea>
         </div>
 
         <div>
           <button type="submit" class="btn btn-submit">Submit</button>
         </div>
       </form>
-    </section>
+    </div>
 
 
   </main>
 
   <footer class="bg-dark">
-    <section class="footer-content">
+    <div class="footer-content">
       <div class="redes">
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-square-instagram"></i>
         <i class="fa-brands fa-square-whatsapp"></i>
       </div>
-      <div class="favicon">ACNUR II DIC12<img src="../multimedia/Logos/favicon.png"></div>
-    </section>
+      <div class="favicon"><p>ACNUR II DIC22</p><img src="../multimedia/Logos/favicon.png" alt="logo favicon"></div>
+    </div>
   </footer>
 
 

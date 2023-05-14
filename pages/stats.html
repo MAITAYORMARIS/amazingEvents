@@ -11,7 +11,7 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/style-index.css">
 
     <title>Stats</title>
@@ -21,18 +21,21 @@
     <header>
         <nav class="navbar bg-dark" data-bs-theme="dark">
             <div class="container">
-                <div class="navbar-brand" href="#">
-                    <img src="../multimedia/Logos/Logo Amazing Events.png" alt="amazing events">
+                <div class="navbar-brand">
+                    <img src="../multimedia/Logos/LogoAmazingEvents.png" alt="amazing events">
                 </div>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
+
                         <a class="nav-link enlaceNav" aria-current="page" href="../index.html" id="home">Home</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link enlaceNav" href="../index.html?tiempo=upcoming" id="upcoming">Upcoming
                             Events</a>
                     </li>
                     <li class="nav-item">
+
                         <a class="nav-link enlaceNav" href="../index.html?tiempo=past" id="past">Past Events</a>
                     </li>
                     <li class="nav-item">
@@ -47,16 +50,16 @@
 
     </header>
     <main>
-        <section class="navegacion navStats">
+        <div class="navegacion navStats">
             <div class="navegacionHeaderDos">
                 <a href="./contact.html"><i class="fa-solid fa-angle-left"></i></a>
                 <p class="textoDDD" id="tituloCarousel"></p>
                 <a href="../index.html"><i class="fa-solid fa-angle-right"></i></a>
             </div>
 
-        </section>
-        <section class="estadisticas" >
-            <table width="96%" class="table-bordered border-success-subtle">
+        </div>
+        <div class="estadisticas">
+            <table class="table-bordered border-success-subtle" >
                 <tr>
                     <th colspan="3">Estadisticas de Eventos</th>
                 </tr>
@@ -65,11 +68,9 @@
                     <th scope="col">Evento con menor porcentaje de asistencia</th>
                     <th scope="col">Evento con mayor capacidad</th>
                 </tr>
-                <tr id="maxmin">
-
-                </tr>
+                <tbody id="statsMaxMin"></tbody>
             </table>
-            <table id="statsFuturos" width="96%" class="table-bordered border-success-subtle">
+            <table id="statsFuturos" class="table-bordered border-success-subtle">
                 <tr>
                     <th colspan="3">Estadisticas de Proximos Eventos por categoria</th>
                 </tr>
@@ -83,7 +84,7 @@
             </table>
 
 
-            <table id="statsPasados"width="96%"class="table-bordered border-success-subtle">
+            <table id="statsPasados" class="table-bordered border-success-subtle">
                 <tr>
                     <th colspan="3">Estadisticas de Eventos Pasados por categoria</th>
                 </tr>
@@ -93,20 +94,20 @@
                     <th scope="col">Ingresos</th>
                     <th scope="col">Asistencia</th>
                 </tr>
-                
+
 
             </table>
-        </section>
+        </div>
     </main>
     <footer class="bg-dark">
-        <section class="footer-content">
+        <div class="footer-content">
             <div class="redes">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-square-instagram"></i>
                 <i class="fa-brands fa-square-whatsapp"></i>
             </div>
-            <div class="favicon">ACNUR II DIC12<img src="../multimedia/Logos/favicon.png"></div>
-        </section>
+            <div class="favicon">ACNUR II DIC22<img src="../multimedia/Logos/favicon.png" alt="logo favicon"></div>
+        </div>
     </footer>
 
     <!-- SCRIPTS DE LA PAGINA -->

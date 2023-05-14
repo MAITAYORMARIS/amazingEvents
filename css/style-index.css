@@ -222,6 +222,7 @@ a {
 footer {
     height: 50px;
     width: 100%;
+    display: flex !important;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -229,9 +230,9 @@ footer {
 }
 
 .footer-content {
-    width: 80%;
+    width: 100%;
     height: 100%;
-    display: flex;
+    display: flex !important;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -264,7 +265,18 @@ footer {
     margin-left: 5px;
     width: 40px;
 }
-
+.aviso{
+    font-size: 2.5em;
+    color: #212529a1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
 /* ESTILOS DEL FORMULARIO */
 /* #formulario{
     display: none;
@@ -350,7 +362,9 @@ footer {
 
 }
 
-
+.favicon>p{
+    margin:0 !important;
+}
 /* ESTILOS DE LA PAGINA DE ESTADISTICAS */
 .estadisticas {
     width: 80%;
@@ -369,6 +383,10 @@ footer {
 colspan{
     background-color: #212529;
 }
+table{
+    width: 96%;
+}
+
 @media screen and (max-width:280px) {
     .navegacion{
     display:none;}

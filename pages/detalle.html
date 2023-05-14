@@ -11,7 +11,7 @@
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/style-index.css">
     <link rel="stylesheet" href="../css/style-detalle.css">
 
@@ -22,18 +22,18 @@
     <header>
         <nav class="navbar bg-dark" data-bs-theme="dark">
             <div class="container">
-                <div class="navbar-brand" href="#">
-                    <img src="../multimedia/Logos/Logo Amazing Events.png" alt="amazing events">
+                <div class="navbar-brand">
+                    <img src="../multimedia/Logos/LogoAmazingEvents.png" alt="amazing events">
                 </div>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
                         <a class="nav-link enlaceNav" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link enlaceNav" href="#" id="upcoming">Upcoming Events</a>
+                        <a class="nav-link enlaceNav" href="../index.html?tiempo=upcoming"  id="upcoming">Upcoming Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link enlaceNav" href="#" id="past">Past Events</a>
+                        <a class="nav-link enlaceNav" href="../index.html?tiempo=past" id="past">Past Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="./contact.html">Contact</a>
@@ -48,14 +48,14 @@
     <main>
         <!-- ENCABEZADO DE NAVEGACION ENTRE PAGINAS -->
 
-        <section class="navegacion" id="secNavDos">
+        <div class="navegacion" id="secNavDos">
             <div class="navegacionHeaderDos ">
                 <a id="enlaceIzq"><i class="fa-solid fa-angle-left"></i></a>
                 <p class="textoDDD" id="tituloCarousel"></p>
                 <a id="enlaceDer"><i class="fa-solid fa-angle-right"></i></a>
             </div>
 
-        </section>
+        </div>
         <nav class="navbar navbar-main" id="navbarMainDetalle">
             <!-- cuadros de chequeo por categoria -->
             <div class="container-fluid" id="check"></div>
@@ -68,7 +68,7 @@
             </form>
         </nav>
 
-        <div class="card card-detalle mb-3" id="detallesDeLosEventos">
+        <div id="detallesDeLosEventos">
 
         </div>
         <div class="row row-cols-3 grupo" id="cartasDeEventos">
@@ -76,14 +76,14 @@
         </div>
     </main>
     <footer class="bg-dark">
-        <section class="footer-content">
+        <div class="footer-content">
             <div class="redes">
                 <i class="fa-brands fa-facebook"></i>
                 <i class="fa-brands fa-square-instagram"></i>
                 <i class="fa-brands fa-square-whatsapp"></i>
             </div>
-            <div class="favicon">ACNUR DIC12<img src="../multimedia/Logos/favicon.png"></div>
-        </section>
+            <div class="favicon">ACNUR DIC22<img src="../multimedia/Logos/favicon.png" alt="logo favicon"></div>
+        </div>
     </footer>
 
     <!-- SCRIPT BOOTSTRAP -->
@@ -92,7 +92,7 @@
         crossorigin="anonymous"></script>
 
     <!-- SCRIPTS DE LA PAGINA -->
-      <script src="../javascript/index.js"></script>
+    
     <script src="../javascript/detalle.js"></script>
 
 

@@ -3,11 +3,13 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
-html,
+html{
+    min-height: 100%;
+}
 body {
-    width: 100%;
-    height: auto;
+    width: 100%;   
+   min-height: 100vh;
+ 
 }
 
 header {
@@ -47,33 +49,56 @@ main {
 #navbarMainDetalle{
     display:none
 }
-.card-detalle {
-    width: 70%;
+#detallesDeLosEventos{
+    width: 60%;
     height: auto;
-    text-align: justify;
     margin-top: 50px;
-    margin-bottom: 50px;
+}
+.card-detalle {
+    width: 100%;
+    height:340px;
+    display: flex;
+    flex-direction: row;
+    text-align: justify;
+    
 }
 
 .col-md-5 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-     /* padding-left: 15px;  */
+    height: 100%;
+   
 }
-.card .row{
-    margin-top: 0;
-    --bs-gutter-y: 0rem !important;
-
+.col-md-5>img{
+    border-top-left-radius: 15px;
 }
-
+.col-md-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+   
+}
+.card-title{
+    color: #212529a1;
+    text-transform: uppercase;
+    padding-top: 20px;
+    text-align: center;
+    height: 15%;
+}
+.card-body{
+    width: 100%;
+    height: 100%;
+}
 p {
     margin: 0%;
 }
 
 .datos {
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,6 +140,7 @@ p {
     color: #fff;
     font-weight: bold;
     font-size: 1.3em;
+    border-bottom-right-radius: 20px;
 }
 
 .fecha {
@@ -122,23 +148,33 @@ p {
     height: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 0%;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     background-color: #e0e0e0;
-}
-
-.col-md-12 {
-    position: relative;
-    left: 15px;
+    padding-right: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 20px;
     color: #212529a1;
-    text-transform: uppercase;
 }
-h5{
-    font-weight: bolder;
-    font-size: 1.5em;
+.descripcion{
+    height: 60%;
+    font-size: 1.3em;
+    padding-top: 10px;
+
+}
+.col{
+    height: 400px;
+  border: rgb(226, 176, 230) 5px solid;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .footer-content {
     width: 80%;
