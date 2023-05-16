@@ -390,6 +390,7 @@ table{
 @media screen and (max-width:280px) {
     .navegacion{
     display:none;}
+
     .navbar-main{
         display:none !important;
     }
@@ -400,8 +401,7 @@ table{
         margin-top: 200px !important;
     }
     .card{
-        width: 200px;
-        height: 200px;
+        width: 210px;
         box-shadow: 7px -8px 9px -6px rgba(0, 0, 0, 0.986);
     }
     .favicon {
@@ -415,6 +415,17 @@ table{
     .card-footer .btn-outline-light {
         --bs-btn-padding-x: 0.25rem;
     --bs-btn-padding-y: 0.25rem;
+    }
+    footer{
+        visibility: hidden;
+    }
+    .formulario{
+        margin-top: 200px;
+        width: 90%;
+        height: auto;
+    }
+    .estadisticas{
+       visibility: hidden;
     }
 
 }
@@ -473,6 +484,10 @@ table{
         font-size: 1em;
         width: 50%;
     }
+    .formulario{
+        width: 90%;
+        height: auto;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width: 991.98px){
@@ -508,6 +523,10 @@ table{
     .container, .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
        padding: 0 !important;
         --bs-gutter-x: 1rem !important;
+}
+.formulario{
+    width: 60%;
+   
 }}
     
 @media screen and (min-width:992px)and (max-width: 1380px){
