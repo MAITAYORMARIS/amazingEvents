@@ -81,7 +81,7 @@ header {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    background-image: url(../multimedia/Images/Diseño\ sin\ título.png);
+    background-image: url(../images/Diseñosintítulo.png);
         filter: brightness(85%);
     background-size:cover;
     background-repeat: no-repeat;
@@ -278,9 +278,6 @@ footer {
     
 }
 /* ESTILOS DEL FORMULARIO */
-/* #formulario{
-    display: none;
-} */
 .formulario {
     width: 40%;
     height: 500px;
@@ -289,7 +286,7 @@ footer {
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 15px;
-    background-image: url(../multimedia/Images/fondoform.jpg);
+    background-image: url(../images/fondoform.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -312,10 +309,6 @@ footer {
     border-color: #5BBA6F !important;
     background-color: #157347 !important;
 }
-
-/* .form-control {
-    --bs-border-color: #5BBA6F;
-} */
 
 .formulario .mb-3 .form-header .form-tittle {
     font-weight: bold;

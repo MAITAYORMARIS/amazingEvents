@@ -102,16 +102,6 @@ function navegacion(id) {
 // // function display genera el template para la seccion seleccionada
 // += permite ir sumando elementos en el html a medida que se recorre el array
 function display(array) {
-    // var url;
-    // var imageUrl;
-    // if (location.pathname == "/pages/detalle.html") {
-    //     url = "./detalle.html"
-    //     imageUrl = "../multimedia/Images/"
-    // }
-    // else{
-    //     url="./pages/detalle.html"
-    //     imageUrl=""
-    // }
 
     var html = "";
     for (var i = 0; i < array.length; i++) {
